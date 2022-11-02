@@ -1,5 +1,9 @@
 package btestats.btestats.Database;
 
+import com.mongodb.client.MongoDatabase;
+
+import java.util.Date;
+
 public class Players {
     /*TODO Implement:
     1. Add block place, remove block place function (increments db object and adds 1)
@@ -9,10 +13,20 @@ public class Players {
         uuid: string,
         blocksPlaced: int,
         lastLogin: Date,
-        loginStreak: int
+        loginStreak: int,
+        hoursPlayed: int
     }
     Note: EVERY DB CALL MUST FIRST GO THROUGH VALIDATION
      */
+
+    private MongoDatabase database;
+    public Players(MongoDatabase database){
+        this.database=database;
+    }
+
+    public void getPlayer(String uuid){
+
+    }
 
 
 }
